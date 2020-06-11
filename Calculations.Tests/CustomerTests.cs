@@ -2,11 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Calculations.Tests
 {
+    //[Collection("Customer")] //In one class of we are creating multiple test classes then we can group them as Collection
     public class CustomerTests
     {
+        private readonly ITestOutputHelper _testOutputHelper;
+        public CustomerTests(ITestOutputHelper testOutputHelper)
+        {
+            _testOutputHelper = testOutputHelper;
+            _testOutputHelper.WriteLine("Constructor");
+        }
+
         [Fact]
         public void Check_valid_for_Insurance()
         {

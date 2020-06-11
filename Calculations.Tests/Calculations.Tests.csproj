@@ -17,4 +17,10 @@
     <ProjectReference Include="..\Calculations\Calculations.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="IsOddEvenTestData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
